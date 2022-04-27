@@ -1,0 +1,195 @@
+*{
+    margin: auto;
+    padding: 0px;
+}
+body{
+
+}
+#header{
+    height: 100px;
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid gray ;
+}
+#header .img2{
+    position: absolute;
+    left: 330px;
+    top: 10px;
+}
+#header form{
+    position: absolute;
+    right: 120px;
+    top: 50px;
+}
+#header form .input{
+        width: 90%;
+        height: 35px;
+        border-radius: 25px;
+        background-color: #f8f8f8;
+        color: #888888;
+}
+#header form button:hover{
+    background-color: #888888;
+}
+#nav{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    background-color: rgb(0, 0, 0);
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+}
+.menu a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 0px 24px;
+}
+.menu li:hover{
+   background-color: #888888;
+}
+.menu a:hover{
+    background-color: #dbdada;
+}
+#nav .menu li>a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #f8f8f8;
+    line-height: 50px;
+}
+.menu_ao{
+    display: none;
+    position: absolute;
+}
+.menu_pk{
+    display: none;
+    position: absolute;
+}
+.menu li:hover .menu_ao{
+    display: block;
+    list-style: none;
+    background-color: #888888;
+}
+.menu li:hover .menu_ao>li{
+    background-color: #888888;
+}
+.menu li:hover .menu_pk{
+    display: block;
+    list-style: none;
+    background-color: #888888;
+}
+.menu_quan{
+    display: none;
+    position: absolute;
+}
+.menu li:hover .menu_quan{
+    display: block;
+    list-style: NONE;
+    background-color: #888888;
+}
+.menu .SPM{
+    background-color: #4e5353;
+}
+.menu .SPM a{
+    text-decoration: line-through;
+    font-style: italic;
+    font-style: oblique;
+}
+#Dangki{
+    background-image: url(../img/dangki.jpg);
+    height: 600px;
+    width: 100%;
+}
+#header #icon{
+  position: absolute;
+  right: -45px;
+  top: 2px;
+  font-size: 30px;
+  color: grey;
+}
+#header #icon:hover{
+  background-color: #cfd5d5;
+}
+form{
+    width: 60%;
+    background-color:#fff;
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+* {box-sizing: border-box}
+body{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+h1, label{
+  color: DodgerBlue;
+  text-align: center;
+}
+/* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  width:100%;
+  resize: vertical;
+  padding:15px;
+  border-radius:15px;
+  border:0;
+  box-shadow:4px 4px 10px rgba(0,0,0,0.2);
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.signupbtn {
+  float: left;
+  width: 100%;
+  border-radius:15px;
+  border:0;
+  box-shadow:4px 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}

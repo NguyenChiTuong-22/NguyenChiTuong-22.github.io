@@ -1,0 +1,278 @@
+*{
+    margin: auto;
+    padding: 0px;
+}
+body{
+
+}
+#header{
+    height: 100px;
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid gray ;
+    background-color: #fff;
+    
+}
+#header .img2{
+    position: absolute;
+    left: 330px;
+    top: 10px;
+}
+#header #icon{
+    position: absolute;
+    right: -45px;
+    top: 2px;
+    font-size: 30px;
+    color: grey;
+}
+#header #icon:hover{
+    color: aqua;
+    font-weight: bold;
+}
+#header form{
+    position: absolute;
+    right: 120px;
+    top: 50px;
+}
+#header form .input{
+        width: 90%;
+        height: 35px;
+        border-radius: 25px;
+        background-color: #f8f8f8;
+        color: #888888;
+}
+#header form button:hover{
+    background-color: #888888;
+}
+#nav{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    background-color: rgb(0, 0, 0);
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+}
+.menu a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 0px 24px;
+}
+.menu li:hover{
+   background-color: #888888;
+}
+.menu a:hover{
+    background-color: #dbdada;
+}
+#nav .menu li>a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #f8f8f8;
+    line-height: 50px;
+}
+.menu_ao{
+    display: none;
+    position: absolute;
+}
+.menu_pk{
+    display: none;
+    position: absolute;
+}
+.menu li:hover .menu_ao{
+    display: block;
+    list-style: none;
+    background-color: #888888;
+}
+.menu li:hover .menu_ao>li{
+    background-color: #888888;
+}
+.menu li:hover .menu_pk{
+    display: block;
+    list-style: none;
+    background-color: #888888;
+}
+.menu_quan{
+    display: none;
+    position: absolute;
+}
+.menu li:hover .menu_quan{
+    display: block;
+    list-style: NONE;
+    background-color: #888888;
+}
+.menu .SPM{
+    background-color: #4e5353;
+}
+.menu .SPM a{
+    text-decoration: line-through;
+    font-style: italic;
+    font-style: oblique;
+}
+#content{
+    margin-top: 100px;
+    width: 100%;
+    height: auto;
+}
+.sec{
+    width: 100%;
+}
+.left img {
+    float: left;
+    width: 600px;
+    height: 700px;
+}
+.right img {
+    float: right;
+    width: 600px;
+    height: 700px;
+}
+h2{
+    clear: both;
+    text-align: center;
+    margin: 10px;
+    font-size: 30px;
+}
+#content .but{
+    font-size: 30px;
+
+ 
+}
+.but li{
+    list-style: none;
+    margin-bottom: 10px;
+  
+}
+.but a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    text-align: center;
+}
+.but li{
+    display: inline-block;
+    padding: 0px 60px;
+}
+#CTSP p{
+    font-size: 25px;
+    margin: 30px;
+    margin-bottom: 20px;
+    color: #5b5a5a;
+}
+.CT{
+    position: relative;
+    height: 100px;
+    background-color: #d9d3d3;
+}
+.CT h1{
+    position: absolute;
+    bottom: 30px;
+    left: 10px;
+    font-size: 25px;
+}
+.cuoi{
+    clear: both;
+    height: 300px;
+    width: 100%;
+    background-color: #dbdada;
+}
+.cuoi .para{
+    display: flex;
+}
+.cuoi h2{
+    padding-top: 20px;
+    text-align: center;
+}
+.cuoi .para1{
+  /* margin-left: 100px;  */
+}
+.para1{
+   /* float: left;*/
+    margin-top: 30px;
+    font-size: 20px;
+}
+.para2{
+    /*float: left;*/
+    /*margin-left: 280px;*/
+    margin-top: 30px;
+    font-size: 20px;
+}
+.para1 ul{
+    list-style: none;
+    margin-top: 10px;
+}
+.para1 li > a{
+    text-decoration: none;
+    color: #8b8989;
+    padding-left: 20px;
+}
+.para2 ul{
+    list-style: none;
+    margin-top: 10px;
+}
+.para2 ul li{
+    margin-top: 10px;
+}
+.para2 li > a{
+    text-decoration: none;
+    color: #8b8989;
+    padding-left: 20px;
+}
+.para3{
+    /*float: left;*/
+    /*margin-left: 350px;*/
+    margin-top: 30px;
+    font-size: 20px;
+}
+.para3 ul{
+    list-style: none;
+    margin-top: 10px;
+}
+.para3 ul li{
+    margin-top: 10px;
+}
+.para3 li > a{
+    text-decoration: none;
+    color: #8b8989;
+    padding-left: 20px;
+
+}
+.para4{
+    /*float: left;*/
+   /* margin-left: 350px;*/
+    margin-top: 30px;
+    font-size: 20px;
+}
+.para4 ul{
+    list-style: none;
+    margin-top: 10px;
+}
+.para4 ul li{
+    margin-top: 10px;
+}
+.para4 li > a{
+    text-decoration: none;
+    color: #8b8989;
+    padding-left: 20px;
+}
+.para4 li{
+    padding-left: 20px;
+}
+#footer{
+    height: 60px;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+#footer p{
+  padding-top: 20px;
+}
+#main{
+    width: 100%;
+    position: fixed;
+    top: 0px;
+}

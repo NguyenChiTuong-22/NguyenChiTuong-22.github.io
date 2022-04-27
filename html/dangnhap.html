@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cssDangKi.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css">
+    <script src="../js/js.js"></script>
+    <script src="../js/DangKi.js"></script>
+    <link rel="stylesheet" href="../js/DangKi.js">
+    <title>Document</title>
+    <script>
+        function KiemTraTenDN(){
+    var re = /^[A-Za-z]\w*/;
+    if(re.test(document.getElementById('txtTen').value.trim())==false){
+        tendn.innerText = " *Bắt buộc, bắt đầu bằng ký tự in hoa";
+        return false;
+    }
+    else{
+        tendn.innerText = " *";
+        return true;
+    }
+}
+function KiemTraPassWord(){
+    var re = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    if(re.test(document.getElementById('txtPass').value.trim())==false){
+        pass.innerText = " *Bắt buộc, phải có chữ, số, ít nhất 8 ký tự";
+        return false;
+    }
+    else{
+        pass.innerText ="*";
+        return true;
+    }
+}
+function KiemTraXacNhanPassWord(){
+    if(document.getElementById('txtNLP').value!=document.getElementById('txtPass').value){
+        nlp.innerText = " * Mật khẩu không khớp";
+        return false;
+    }
+    else{
+        nlp.innerText = " *"; 
+        return true;
+    }
+}
+function KiemTraSDT() {
+    var re=/^[0]\d{2}\d{3}\d{4}/;
+    if (re.test(document.getElementById('txtSDT').value.trim()) == false){
+        sdt.innerText = " *Phải nhập theo mẫu xxx.xxxx.xxx";
+        return false;
+    }    
+    else{
+        sdt.innerText = " *";
+        return true;
+    }     
+}  
+function SubmitForm(){
+            if(KiemTraTenDN()==false || KiemTraPassword()==false
+            ||KiemTraXacNhanPassword()==false || KiemTraSDT() == false)
+                alert("Bạn chưa nhập đầy đủ và đúng thông tin!");
+            else
+            {
+                var tt1=document.getElementById("txtTen").value;
+                alert("xin chào " +tt1);
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="header">
+        <img src="../img/LOGO.jpg" width="300px" height="100px" alt="">
+        <img class="img2" src="../img/Screenshot 2022-03-25 211518.png"  alt="">
+        <form action="">
+            <input class="input" type="text" name="" id="KtraTimKiem" placeholder="Tìm Kiếm" size="30px">
+            <i class="fa-solid fa-magnifying-glass" ></i>
+            <i class="fa-solid fa-file-user"></i>
+            <a href="http://127.0.0.1:5500/html/DangKy.html"><i class="fa-regular fa-user" id="icon"></i></a></i>
+        </form>
+    </div>
+    <div id="nav">
+           <ul class="menu">
+            <li><a href="http://127.0.0.1:5500/html/TrangChu.html">TRANG CHỦ</a></li>
+            <li><a href="http://127.0.0.1:5500/html/GioiThieu.html">GIỚI THIỆU</a></li>
+               <li><a href="http://127.0.0.1:5500/html/SanPhamMoi.html">SẢN PHẨM MỚI</a></li>
+               <li><a href="">20% COLECTION</a></li>
+               <li><a href="">ÁO</a>
+                    <ul class="menu_ao">
+                        <li><a href="">ÁO THUN</a></li>
+                        <li><a href="">ÁO SƠMI</a></li>
+                        <li><a href="">ÁO KHOÁC</a></li>
+                        <li><a href="">Áo POLOS</a></li>
+                    </ul>
+                </li>
+                <li><a href="">QUẦN</a>
+                    <ul class="menu_quan">
+                        <li><a href="">QUẦN TÂY</a></li>
+                        <li><a href="">KAKI</a></li>
+                        <li><a href="">JEANS</a></li>
+                        <li><a href="">JOGGERS</a></li>
+                    </ul>
+                </li>
+                <li><a href="">PHỤ KIỆN</a>
+                    <ul class="menu_pk">
+                        <li><a href="">BALO</a></li>
+                        <li><a href="">NÓN</a></li>
+                        <li><a href="">TÚI XÁCH</a></li>
+                        <li><a href="">VÍ</a></li>
+                </li>
+           </ul>
+    </div>
+   <div id="Dangki">
+    <form action="#" name="form1" onsubmit="SubmitForm();" method="post">
+        <div class="container">
+          <h1>Đăng Nhập</h1>
+          <hr>
+      
+          <label for="ten"><b>Tên Tài Khoản</b></label><span id="tendn" style="color: red;"> (*)</span>
+          <input id="txtTen" type="text" onblur="return KiemTraTenDN();" placeholder="Nhập Tên Tài Khoản" name="ten" required> 
+      
+          <label for="psw"><b>Mật Khẩu</b></label><span id="pass" style="color: red;"> (*)</span>
+          <input id="txtPass" type="password"  onblur="return KiemTraPassWord();" placeholder="Nhập Mật Khẩu" name="psw" required>
+      
+          <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Nhớ Đăng Nhập
+            <a href="" style="color: rgb(49, 160, 234);text-decoration: none;">| Bạn quên mật khẩu ?</a>
+            <a href="http://127.0.0.1:5500/html/DangKy.html" style="color: rgb(49, 160, 234);float: right;text-decoration: none;">Bạn chưa có tài khoản ?</a>
+          </label>
+      
+          <div class="clearfix">
+            <button type="submit" onblur="return SubmitForm();" class="signupbtn">Login</button>
+            <div class="dn" style="text-align: center;margin: 10px;">
+                <p style=" margin-bottom: 20px;">Hoặc đăng nhập bằng</p>
+                <a href="https://www.facebook.com/"><img src="../img/i-face.jpg" alt=""></a>
+                <a href="https://accounts.google.com/ServiceLogin/identifier?service=mail&passive=1209600&osid=1&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><img src="../img/i-gmail.jpg" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </form>
+   </div>
+</body>
+</html>
